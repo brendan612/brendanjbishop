@@ -1,0 +1,40 @@
+.nav-icons {
+    padding: 0 15px;
+    color: #fff;
+}
+.nav-icons:hover {
+    transform: scale(1.5, 1.5);
+}
+
+nav ul li {
+    display: inline-block;
+  }
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 3px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
