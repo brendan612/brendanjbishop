@@ -1,0 +1,20 @@
+.bjb__footer {
+    display: flex;
+    justify-content: center;
+}
+
+.bjb__footer-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bjb__footer-links a {
+    padding: 0 2rem;
+} .bjb__footer-links a svg:hover{
+    transform: scale(1.25);
+}
+
+.bjb__footer-links a svg{
+    color: #7Cf3A0;
+    font-size: 50px;
+}

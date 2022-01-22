@@ -22,14 +22,14 @@ const Navbar = () => {
                 <div className='bjb__navbar-links_logo'>
                     <img src={logo} alt='logo'/>
                 </div>
-                <div className='bjb__navbar-links_container'>
+                {/* <div className='bjb__navbar-links_container'>
                     <Menu />
-                </div>
+                </div> */}
             </div>
             <div className='bjb__navbar-contact'>
-                <p>Contact</p>
+                <a href='mailto:brendan612@gmail.com' target='_blank'>Contact</a>
             </div>
-            <div className='bjb__navbar-menu'>
+            {/* <div className='bjb__navbar-menu'>
                 {toggleMenu
                     ? <RiCloseLine color='#fff' size={27} onClick={() => setToggleMenu(false)}/>
                     : <RiMenu3Line color='#fff' size={27} onClick={() => setToggleMenu(true)}/>
@@ -44,7 +44,7 @@ const Navbar = () => {
                         </div>
                     </div>
                 )}
-            </div>
+            </div> */}
 
         </div>
     )

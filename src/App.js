@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { Navbar } from './components';
-import { Header, Footer } from './containers';
+import { Header, Footer, Experience, Skills } from './containers';
 
 import React from 'react';
 
@@ -16,15 +16,16 @@ const App = () => {
     <div className='App'>
       <div className='gradient__bg'>
         <Navbar />
-        <Header />
+        <div className='bjb__body'>
+          <Header />
+          <div className='bjb__details'>
+            <Experience />
+            <Skills />
+          </div>
+        </div>
         <Footer />
       </div>
     </div>
-    // <Router>
-    //   <div style={{ backgroundColor: "#22264c", height: "100vh" }}>
-    //     <Navbar />
-    //   </div>
-    // </Router>
   );
 };
 
