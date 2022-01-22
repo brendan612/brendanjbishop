@@ -6,7 +6,7 @@
   --gradient-text: linear-gradient(89.97deg, #ec9f05 1.84%, #ff4e00  102.67%);
   --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
   
-  --color-bg: #040C18;
+  --color-bg: radial-gradient(circle at 50% 0%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
   --color-footer : #031B34;
   --color-blog: #042c54;
   --color-text: #81AFDD;
