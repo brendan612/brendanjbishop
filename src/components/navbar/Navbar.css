@@ -93,9 +93,6 @@
 }
 
 @media screen and (max-width: 1050px){
-  .bjb__navbar-links_container {
-    display: none;
-  }
   .bjb__navbar-menu {
     display: flex;
   }
@@ -110,9 +107,6 @@
 @media screen and (max-width: 550px){
   .bjb__navbar {
     padding: 2rem;
-  }
-  .bjb__navbar-contact {
-    display: none;
   }
   .bjb__navbar-menu_container {
     top: 20px
