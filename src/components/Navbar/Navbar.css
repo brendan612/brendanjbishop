@@ -1,40 +1,119 @@
-.nav-icons {
-    padding: 0 15px;
-    color: #fff;
-}
-.nav-icons:hover {
-    transform: scale(1.5, 1.5);
+.bjb__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
 }
 
-nav ul li {
-    display: inline-block;
-  }
+.bjb__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  nav ul li a,
-  nav ul li a:after,
-  nav ul li a:before {
-    transition: all .5s;
-  }
+.bjb__navbar-links_logo {
+  margin-right: 2rem;
+}
+
+.bjb__navbar-links_logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.bjb__navbar-links_container {
+  display: flex;
+}
+
+.bjb__navbar-contact {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bjb__navbar-links_container p, 
+.bjb__navbar-contact p, 
+.bjb__navbar-menu_container p {
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
   
+  margin: 0 1rem;
+  cursor: pointer;
+}
 
-/* stroke */
-nav.stroke ul li a,
-nav.fill ul li a {
+.bjb__navbar-contact p {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.bjb__navbar-menu {
+  margin-left: 1rem;
+  display: none;
   position: relative;
 }
-nav.stroke ul li a:after,
-nav.fill ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: #aaa;
-  height: 3px;
+
+.bjb__navbar-menu svg {
+  cursor: pointer;
 }
-nav.stroke ul li a:hover:after {
-  width: 100%;
+
+.bjb__navbar-menu_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+
+  text-align: end;
+  background: var(--color-footer);
+  padding: 2rem;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-top: 1rem;
+  min-width: 210px;
+  border-radius: 5px;
+  box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+}
+
+.bjb__navbar-menu_container p {
+  margin: 1rem 0;
+}
+
+.bjb__navbar-menu_container-links-contact {
+  display: none;
+}
+
+@media screen and (max-width: 1050px){
+  .bjb__navbar-links_container {
+    display: none;
+  }
+  .bjb__navbar-menu {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .bjb__navbar {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .bjb__navbar {
+    padding: 2rem;
+  }
+  .bjb__navbar-contact {
+    display: none;
+  }
+  .bjb__navbar-menu_container {
+    top: 20px
+  }
+  .bjb__navbar-menu_container-links-contact {
+    display: block;
+  }
 }

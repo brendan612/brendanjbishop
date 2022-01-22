@@ -1,37 +1,52 @@
-import Link from 'next/link';
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './Navbar.css';
-import my_logo from "../../assets/logo.png";
-import { NavLink } from "react-router-dom";
-import { Container, Nav, Logo, NavUL, NavLI } from './Navbar.style';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import Typography from '@mui/material/Typography';
+import logo from "../../assets/logo.png";
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+
+const Menu = () => (
+    <>
+        <p><a href='#home'>Home</a></p>
+        <p><a href='#about'>About</a></p>
+        <p><a href='#exp'>Experience</a></p>
+        <p><a href='#projects'>Projects</a></p>
+    </>
+)
 
 const Navbar = () => {
+    const [toggleMenu, setToggleMenu] = useState(false);
+
+
     return (
-        <Container>
-            <Nav className='stroke'>
-                <NavLink to="/">
-                    <Logo src={my_logo}/>
-                </NavLink>
-                <NavUL>
-                    <NavLI>
-                        <NavLink to="/about">About</NavLink>
-                    </NavLI>
-                    <NavLI>
-                        <NavLink to="/work">Work</NavLink>
-                    </NavLI>
-                    <NavLI>
-                        <NavLink to="/contact">Contact</NavLink>
-                    </NavLI>
-                </NavUL>
-                <div>
-                    <a href="https://github.com/brendan612/" target="_blank"><GitHubIcon fontSize='large' className='nav-icons' /></a>
-                    <a href="https://www.linkedin.com/in/brendan-bishop-729b54145/" target="_blank"><LinkedInIcon fontSize='large' className='nav-icons' /></a>
+        <div className='bjb__navbar'>
+            <div className='bjb__navbar-links'>
+                <div className='bjb__navbar-links_logo'>
+                    <img src={logo} alt='logo'/>
                 </div>
-            </Nav>
-        </Container>
+                <div className='bjb__navbar-links_container'>
+                    <Menu />
+                </div>
+            </div>
+            <div className='bjb__navbar-contact'>
+                <p>Contact</p>
+            </div>
+            <div className='bjb__navbar-menu'>
+                {toggleMenu
+                    ? <RiCloseLine color='#fff' size={27} onClick={() => setToggleMenu(false)}/>
+                    : <RiMenu3Line color='#fff' size={27} onClick={() => setToggleMenu(true)}/>
+                }
+                { toggleMenu && (
+                    <div className='bjb__navbar-menu_container scale-up-center'>
+                        <div className='bjb__navbar-menu_container-links'>
+                            <Menu />
+                            <div className='bjb__navbar-menu_container-links-contact'>
+                                <p>Contact</p>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </div>
+
+        </div>
     )
 }
 export default Navbar;
